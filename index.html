@@ -36,11 +36,22 @@ h1, h2 {
     font-size: 1em;
 }
 
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.horizontal {
+    min-height: 95vh;
+}
+
 .parallel {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 .group {
@@ -58,40 +69,54 @@ h1, h2 {
 
 .btn-social>img {
     height: 32px;
+}
 
+@media screen and (max-width: 1199px) {
+    .center {
+        max-width: 860px;
+    }
+}
+@media screen and (min-height: 1000px) {
+    .horizontal {
+       min-height: 500px;
+       margin-top: 100px;
+    }
 }
 </style>
 
-<div class="parallel">
-    <div class="group">
-        <h1>Carlos Lenz</h1>
-        <img src="me.jpg" alt="My avatar">
-    </div>
+<div class="center horizontal">
+<div class="center">
+    <div class="parallel">
+        <div class="group">
+            <h1>Carlos Lenz</h1>
+            <img src="me.jpg" alt="My avatar">
+        </div>
 
-    <div class="group">
-        <h2>Files</h2>
-        <a href="https://drive.google.com/file/d/0B2A7gTfXQ2ppRkVsa0pGVnQ2dWc/view">Resume</a>
-    </div>
+        <div class="group">
+            <h2>Files</h2>
+            <a href="https://drive.google.com/file/d/0B2A7gTfXQ2ppRkVsa0pGVnQ2dWc/view">Resume</a>
+        </div>
 
-    <div class="group">
-        <h2>Finding me</h2>
-        <div class="contact">
-            <a class="btn btn-block btn-social btn-twitter" href="https://twitter.com/Carlos_Lenz">
-                <span class="fa fa-twitter"></span> Twitter
-            </a>
-            <a class="btn btn-block btn-social btn-linkedin" href="https://www.linkedin.com/in/carloseduardolenz">
-                <span class="fa fa-linkedin"></span> Linkedin
-            </a>
-            <a class="btn btn-block btn-social btn-github" href="https://github.com/carloslenz">
-                <span class="fa fa-github"></span> GitHub
+        <div class="group">
+            <h2>Finding me</h2>
+            <div class="contact">
+                <a class="btn btn-block btn-social btn-twitter" href="https://twitter.com/Carlos_Lenz">
+                    <span class="fa fa-twitter"></span> Twitter
+                </a>
+                <a class="btn btn-block btn-social btn-linkedin" href="https://www.linkedin.com/in/carloseduardolenz">
+                    <span class="fa fa-linkedin"></span> Linkedin
+                </a>
+                <a class="btn btn-block btn-social btn-github" href="https://github.com/carloslenz">
+                    <span class="fa fa-github"></span> GitHub
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <h2>Applications</h2>
+            <a href="https://fusionfit.sudecke.com/">
+                <img src="https://fusionfit.sudecke.com/logo.png" alt="FusionFit logo" height="40px">
             </a>
         </div>
-    </div>
-    <div class="group">
-        <h2>Applications</h2>
-        <a href="https://fusionfit.sudecke.com/">
-            <img src="https://fusionfit.sudecke.com/logo.png" alt="FusionFit logo" height="40px">
-        </a>
     </div>
 </div>
 
